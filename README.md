@@ -22,7 +22,7 @@ Follow these steps to run the project locally:
    git clone https://github.com/Hadi-chouaieb/Event-Website-React-NodeJs-
 2. Install Node Module :
     ```bash
-    **npm install**
+    npm install
 3. run the project 
     ```bash 
         npm run dev
