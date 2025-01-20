@@ -1,0 +1,15 @@
+.allEf {
+ 
+  position: absolute; /* Fixed positioning ensures it covers the entire viewport */
+  top: 0; /* Positioning starts from the top of the viewport */
+  left: 0; /* Positioning starts from the left of the viewport */
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+}
+
+canvas {
+  opacity:1 !important;
+  width: 100%; /* Ensures it scales with its container */
+  height: 100%; /* Ensures it scales with its container */
+  display: block; /* Removes any extra space caused by inline behavior */
+}

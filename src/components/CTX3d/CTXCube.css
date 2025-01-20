@@ -1,0 +1,124 @@
+@keyframes turn {
+  from { transform: rotate3d(0, 0, 0, 0); }
+  to { transform: rotate3d(2, 3, -2, 360deg); }
+}
+
+.CTX {
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+  position: absolute;
+  margin-right: 50px;
+  margin-left: calc(50% - 50px);
+  margin-bottom: 18vh;
+  bottom: 0;
+  left: 0;
+  opacity: 0.7;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.cube {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  animation: turn 3s linear infinite; /* Optional: You can remove this line if you don't want continuous rotation */
+}
+
+.face {
+  width: 100px;
+  height: 100px;
+  border: 1px solid rgba(44, 253, 2, 0.89);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  font-size: 2rem;
+  transition: transform 500ms;
+  box-shadow: 1px 2px 31px rgba(0, 250, 0, 0.151);
+  background-image: url("/imgs/bgface.jpg");
+  background-size: cover;
+  opacity: 0.8;
+}
+
+.face > img {
+  width: 100px;
+}
+
+.front {
+  transform: translateZ(50px);
+}
+
+.back {
+  transform: translateZ(-50px) rotateY(180deg);
+}
+
+.left {
+  transform: translateX(-50px) rotateY(-90deg);
+}
+
+.right {
+  transform: translateX(50px) rotateY(90deg);
+}
+
+.top {
+  transform: translateY(-50px) rotateX(90deg);
+}
+
+.bottom {
+  transform: translateY(50px) rotateX(-90deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cube {
+    animation: none;
+    transform: rotate3d(1, 1, 0, 45deg);
+  }
+}
+.cube:hover{
+  cursor: pointer;
+}
+.cube:hover .front {
+  transform: translateZ(120px); /* Move the front face forward */
+}
+
+.cube:hover .back {
+  transform: translateZ(-120px) rotateY(180deg); /* Move the back face backward */
+}
+
+.cube:hover .left {
+  transform: translateX(-120px) rotateY(-90deg); /* Move the left face to the left */
+}
+
+.cube:hover .right {
+  transform: translateX(120px) rotateY(90deg); /* Move the right face to the right */
+}
+
+.cube:hover .top {
+  transform: translateY(-120px) rotateX(90deg); /* Move the top face up */
+}
+
+.cube:hover .bottom {
+  transform: translateY(120px) rotateX(-90deg); /* Move the bottom face down */
+}
+
+.cube-center-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px; /* Adjust size as needed */
+  height: 80px;
+  opacity: 1; /* Initially hidden */
+  transition: opacity 500ms ease;
+  filter: drop-shadow(0px 0px 20px rgb(31, 250, 2)); /* Backdrop shadow */
+}
+
+.cube:hover .cube-center-img {
+  opacity: 1; /* Show the image on hover */
+  
+}
+
+
