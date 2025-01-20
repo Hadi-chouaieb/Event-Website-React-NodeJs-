@@ -25,7 +25,7 @@ Follow these steps to run the project locally:
     npm install
 3. run the project 
     ```bash 
-        npm run dev
+    npm run dev
 **Enjoy** 
 
 This ripo without backend !
