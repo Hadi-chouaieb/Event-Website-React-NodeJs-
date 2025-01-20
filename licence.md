@@ -1,6 +1,9 @@
 # License
-This content is licensed to Hadi Chouaieb. All rights reserved.
+This content is licensed to Hadi chouaieb. All rights reserved.
 
-Unauthorized use, distribution, or reproduction of this content is strictly prohibited without prior written permission from the owner.
+This content may not be used, distributed or reproduced without permission from the owner. (Joke)
 
-For permissions or inquiries, please contact Hadi Chouaieb.
+For permission or inquiries, please contact Hadi Chouaieb.
+
+
+20-01-2025
